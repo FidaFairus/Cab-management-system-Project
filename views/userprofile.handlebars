@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        body{
+            background-image: url('https://static.vecteezy.com/system/resources/previews/002/058/490/non_2x/colorful-abstract-background-free-vector.jpg');
+
+        }
+       .main{
+            margin-top:35px;
+            margin-left:90px;
+            height: 540px;
+            width: 1100px;
+            background-color: white;
+
+        }
+        .container2{
+            display:flex;
+            border-color: black;
+            background-color: white;
+
+        }
+        .box1{
+            width:400px;
+            height:444px;
+            background-color: white;
+        
+         }
+         .box2{
+            width:600px;
+            height:444px;
+         }
+         a:link{
+          text-decoration: none;
+         }
+    </style>
+</head>
+<body>
+   <div class="main">
+       <nav class="navbar navbar-expand-sm navbar-light bg-light">
+          <div class="container">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page">CABRIDE <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/home" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/search">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signup">SignUp</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">user Type</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="/driverlogin">Driver</a>
+                            <a class="dropdown-item" href="/login">Passenger</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0">
+                    
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="/login" style="color:black">Login</a></button>
+                </form>
+            </div>
+         </div>
+       </nav>
+       <div class="container2">
+            <div class="box1">
+                
+                <table style="margin-left:100px;margin-top:20px;">
+                    <h4 style="margin-top:90px;margin-left:100px">User Profile</h4>
+                    
+                    <tr>
+                        <td for="Full_name" style="width:100px">Full Name:</label></td>
+                        <td id="Full_name" name="Full_name"  style="border:solid;border-radius: 10px;width:250px; height:35px;text-align: center;">{{data.Full_name}}</td>
+                    </tr>
+                    <tr>
+                        <td for="Email" style="width:100px">Email:</label></td>
+                        <td  id="Email" style="border:solid;border-radius: 10px;width:250px; height:35px;text-align: center;margin-top: 20px;" name="Email">{{data.Email}}</td></tr>
+                    <tr>
+                        <td for="Mobile_number" style="width:145px">Mobile Number:</label></td>
+                        <td  id="Mobile_number" name="Mobile_number" style="border:solid;border-radius: 10px;width:250px; height:35px;text-align: center;margin-top: 20px;">{{data.Mobile_number}}</td>
+                    </tr>
+                    <tr>
+                        <td for="Username" style="width:145px">Username:</label></td>
+                        <td  type="text" id="Username" name="Username" style="border:solid;border-radius: 10px;width:250px; height:35px;text-align: center;margin-top: 20px;">{{data.Username}}</td>
+                    </tr>
+                        <td><a href="/updateuser/{{data.id}}">Edit</a></td>
+                        <td><a href="/delete/{{data.id}}" class="text-danger" onclick="return confirm('Are you sure you want to delete this')">Delete</a></td>
+                 </table>
+            </div>
+            <div class="box2"><img src="/static/image/taxi-app-concept-illustration_52683-36028.webp" style="width:500px;height:400px;margin-top:40px;margin-left:150px;"></div>
+       </div>
+       
+
+   </div> 
+</body>
+</html>

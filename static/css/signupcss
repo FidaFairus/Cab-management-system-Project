@@ -1,0 +1,38 @@
+body{
+            background-image: url('https://thumbs.dreamstime.com/b/abstract-mood-series-website-background-color-images-high-resolution-backgrounds-designed-use-websites-print-soft-157860142.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .main{
+            margin-top:50px;
+            margin-left:135px;
+            height: 500px;
+            width: 1000px;
+            background-color: white;
+
+        }
+        .container2{
+            display:flex;
+            border-color: black;
+            background-color: white;
+
+        }
+        .box1{
+            width:600px;
+            height:447px;
+            background-color: white;
+        
+         }
+         .box2{
+            width:400px;
+            height:447px;
+         }
+         a:link{
+          text-decoration: none;
+         }
+         .parent{
+            margin-top: 10px;
+            margin-left: 10px;
+            width:550px;
+            height:444px;
+         }

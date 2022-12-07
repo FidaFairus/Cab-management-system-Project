@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    
+    <style>
+        body{
+            background-image: url('https://thumbs.dreamstime.com/b/abstract-mood-series-website-background-color-images-high-resolution-backgrounds-designed-use-websites-print-soft-157860142.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .main{
+            margin-top:35px;
+            margin-left:90px;
+            height: 540px;
+            width: 1100px;
+            background-color: white;
+
+        }
+        .container2{
+            display:flex;
+            border-color: black;
+            background-color: white;
+
+        }
+        .box1{
+            width:600px;
+            height:447px;
+            background-color: white;
+        
+         }
+         .box2{
+            width:400px;
+            height:447px;
+         }
+         a:link{
+          text-decoration: none;
+         }
+         .parent{
+            margin-top: 20px;
+            margin-left: 20px;
+            width:500px;
+            height:444px;
+         }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+           <div class="container">
+             <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                 aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="collapsibleNavId">
+                 <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page">CABRIDE <span class="visually-hidden">(current)</span></a>
+                    </li>
+                     <li class="nav-item">
+                         <a class="nav-link active" href="/home" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="/search">Booking</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="/signup">SignUp</a>
+                     </li>
+                     <li class="nav-item dropdown">
+                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User type</a>
+                         <div class="dropdown-menu" aria-labelledby="dropdownId">
+                             <a class="dropdown-item" href="driversignup">Driver</a>
+                             <a class="dropdown-item" href="login">Passenger</a>
+                         </div>
+                     </li>
+                 </ul>
+                 <form class="d-flex my-2 my-lg-0">
+                     
+                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="/login" style="color:black">Login</a></button>
+                 </form>
+             </div>
+          </div>
+        </nav>
+        <div class="container2">
+        <div class="box1">
+        
+       
+    <div class="parent">
+        <div class="content"></div>
+        <div class="aside">
+            <form  name="regform"  method="post">
+                <h2>Register Now</h2>
+                <input id="myInput"  type="text" class="form-control"style="margin-bottom:20px;margin-top:30px" placeholder="Full Name" name="Full_name" required>
+                <input id="myInput" name="Email" type="email" class="form-control"style="margin-bottom:20px" placeholder="E-mail" required>
+                <input id="myInput" name="Mobile_number" type="text" class="form-control"style="margin-bottom:20px" placeholder="Mobile Number" required>
+            <input id="myInput" name="Username" type="text" class="form-control"style="margin-bottom:30px" placeholder="Username" required>
+            <input id="myInput2" type="password" class="form-control " style="margin-bottom:20px" placeholder="password" name="Password" required maxlength="10" minlength="4">
+            
+           <center>   <span id="err-name" style="color: red;display:block;margin-bottom: 5px;"></span>
+             <input id="submit"type="submit" class="col-5" value="Submit"></center>
+              {{#if message}}
+                        <p class="text-danger">{{message}}</p>
+                    {{/if}}
+        </form>
+        </div>
+    </div>
+
+    
+             </div>
+             <div class="box2"><img src="/static/image/images.png" style="width:370px;height:330px;margin-top:60px;margin-left:50px"></div>
+       </div>
+       
+</body>
+</html>
